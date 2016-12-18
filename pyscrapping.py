@@ -8,4 +8,13 @@ soup = BeautifulSoup(page.content, 'html.parser')
 
 outer_text_all = soup.find_all('p',class_= 'outer-text')
 
-print outer_text_all
+#print outer_text_all
+
+# Could also do this if you do not want just for all p 
+
+soup.find_all(class_="outer-text")
+
+div_p = soup.select("div p")
+
+#print div_p
+
